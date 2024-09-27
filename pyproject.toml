@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "python-education"
+version = "0.1.0"
+description = ""
+authors = ["Aleksandr S.Sakhatskii <sakhackii@protei-lab.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
