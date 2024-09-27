@@ -1,4 +1,4 @@
-def debug_decorator(function):  # "обертывеаем" функцию add новыми свойствами
+def debug_decorator(function):  # "обертываем" функцию add новыми свойствами
     def wrapper(*args):
         print(f"Вызываем функцию {function.__name__}")
         result = function(*args)
