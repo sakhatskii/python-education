@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 psycopg2-binary = "^2.9.9"
 logging = "^0.4.9.6"
+wraps = "^0.15.0"
 
 
 [build-system]
