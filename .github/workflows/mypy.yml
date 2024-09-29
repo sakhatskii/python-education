@@ -1,4 +1,4 @@
-name: Mypy Check
+name: Linters
 
 on:
   push:
@@ -23,3 +23,20 @@ jobs:
         run: poetry install
       - name: Run mypy
         run: poetry run mypy .
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.poetry/bin:$PATH"
+          poetry --version
+      - name: Install dependencies
+        run: poetry install
+      - name: Run flake8
+        run: poetry run flake8 .

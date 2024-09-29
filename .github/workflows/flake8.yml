@@ -1,4 +1,4 @@
-name: Mypy Check
+name: flake8
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  mypy:
+  flake8:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
