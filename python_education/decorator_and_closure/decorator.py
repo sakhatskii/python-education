@@ -7,9 +7,11 @@ def debug_decorator(function):  # "обертываем" функцию add но
         return result
     return wrapper
 
+
 @debug_decorator
 def add(x, y):
     return x + y
+
 
 add(90, 40)
 

@@ -12,6 +12,7 @@ logging.basicConfig(  # настройка логгера
 
 logger = logging.getLogger(__name__)  # создаем логгер с именем текущего модуля (logger_for_connection_to_DB.py)
 
+
 class DataBase:
     def connection_to_db(self, name: str, password: str):
         logger.info("Функция connection_to_db вызвана с аргументами: %s, %s", name, password)
@@ -26,4 +27,5 @@ class DataBase:
         except Exception as e:
             logger.error(f"Ошибка подключения к базе данных {e}")  # выводим сообщение в случае сбоя подключения к бд
 
-DataBase().connection_to_db("db_name","password")
+
+DataBase().connection_to_db("db_name", "password")

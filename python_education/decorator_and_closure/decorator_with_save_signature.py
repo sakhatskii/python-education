@@ -1,7 +1,8 @@
 from functools import wraps
 
+
 def debug_decorator(function):  # "обертываем" функцию add новыми свойствами
-    @wraps(function)  #  декоратор копирует метаданные из функции function во wrapper
+    @wraps(function)  # декоратор копирует метаданные из функции function во wrapper
     def wrapper(*args):
         print(f"Вызываем функцию {function.__name__} с аргументами {args}")
         result = function(*args)
@@ -10,10 +11,12 @@ def debug_decorator(function):  # "обертываем" функцию add но
         return result
     return wrapper
 
+
 @debug_decorator
 def add(x, y):
     """Функция сложения двух чисел"""
     return x + y
+
 
 add(90, 40)
 

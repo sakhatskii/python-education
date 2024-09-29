@@ -13,8 +13,12 @@ wraps = "^0.15.0"
 mypy = "^1.11.2"
 flake8 = "^7.1.1"
 types-psycopg2 = "^2.9.21.20240819"
+flake8-pyproject = "^1.2.3"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 140

@@ -4,6 +4,7 @@ class Closure:
             return x * y
         return inner_function
 
+
 closure = Closure().outer_function(7)  # cоздаем замыкание с x == 7
 
 print(closure(5))  # 35 (7 * 5)

@@ -1,5 +1,6 @@
 import psycopg2
 
+
 class DataBase:
     def __init__(self, db_name):
         self.db_name = db_name
@@ -12,6 +13,7 @@ class DataBase:
     def __exit__(self, exc_type, exc_value, traceback):
         self.connection.close()
         self.cursor.close()
+
 
 with DataBase("db_name") as cursor:
     cursor.execute("SELECT * FROM table_name where id = 1")
