@@ -10,6 +10,9 @@ python = "^3.10"
 psycopg2-binary = "^2.9.9"
 logging = "^0.4.9.6"
 wraps = "^0.15.0"
+mypy = "^1.11.2"
+flake8 = "^7.1.1"
+types-psycopg2 = "^2.9.21.20240819"
 
 
 [build-system]

@@ -12,11 +12,11 @@ print(f"Модель машины: {ford.brand}, мощность: {ford.horsepo
 
 
 @dataclass
-class Cars:
+class DataCars:
     brand: str
     model: str
     vin: str
     horsepower: int
 
-bmw = Cars(brand="BMW", model="X3", vin="VF3WCKFUC33681468", horsepower=260)
+bmw = DataCars(brand="BMW", model="X3", vin="VF3WCKFUC33681468", horsepower=260)
 print(f"Модель машины: {bmw.brand}, мощность: {bmw.horsepower} л.с.")
