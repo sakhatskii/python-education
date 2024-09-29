@@ -25,7 +25,7 @@ class DataBase:
                 for data in result:  # выводим результаты
                     print(data)
         except Exception as e:
-            logger.error(f"Ошибка подключения к базе данных {e}")  # выводим сообщение в случае сбоя подключения к бд
+            logger.error(f"Ошибка подключения к базе данных по причине: {e}")  # выводим сообщение в случае сбоя подключения к бд
 
 
 DataBase().connection_to_db("db_name", "password")

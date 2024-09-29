@@ -22,4 +22,4 @@ info_json_str = json.dumps(info)  # сериализация (преобразо
 print(info_json_str, "длинна =", len(info_json_str), "тип данных =", type(info_json_str))  # длинна = 118 тип данных = <class 'str'>
 
 reconstructed_dict = json.loads(info_json_str)  # десериализация (преобразование JSON обратно в словарь)
-print(reconstructed_dict, "длинна =", len(reconstructed_dict), "тип данных =", type(reconstructed_dict))  # длинна = 4 тип данных = <class 'dict'>
+print(reconstructed_dict, "длинна =", len(reconstructed_dict), "тип данных =", type(reconstructed_dict))

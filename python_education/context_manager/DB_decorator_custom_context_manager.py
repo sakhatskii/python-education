@@ -9,8 +9,8 @@ def connection_to_db(db_name: str):
         connection = psycopg2.connect(dbname="name", user="name", password="password", host='127.0.0.1')  # подключаемся к бд
         cursor = connection.cursor()  # создаем курсор для выполнения запросов
         yield cursor  # возвращаем курсор для использования в блоке with
-    except:
-        print('Ошибка подключения к базе данных')  # выводим сообщение в случае сбоя подключения к бд
+    except psycopg2.OperationalError as e:
+        print(f"Ошибка подключения к базе данных по причине: {e}")  # выводим сообщение в случае сбоя подключения к бд
     finally:
         cursor.close()
         connection.close()
