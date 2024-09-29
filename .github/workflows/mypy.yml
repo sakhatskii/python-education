@@ -1,4 +1,4 @@
-name: TEST
+name: Mypy Check
 
 on:
   push:
@@ -10,9 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Poetry
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.poetry/bin:$PATH"
+          poetry --version
       - name: Install dependencies
-        run: echo Hello World
+        run: poetry install
+      - name: Run mypy
+        run: poetry run mypy .
