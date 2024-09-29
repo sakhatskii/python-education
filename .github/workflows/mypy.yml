@@ -23,3 +23,5 @@ jobs:
         run: poetry install
       - name: Run mypy
         run: poetry run mypy .
+      - name: Run flake8
+        run: poetry run flake8 .
