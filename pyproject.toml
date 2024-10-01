@@ -14,6 +14,7 @@ mypy = "^1.11.2"
 flake8 = "^7.1.1"
 types-psycopg2 = "^2.9.21.20240819"
 flake8-pyproject = "^1.2.3"
+pytest = "^8.3.3"
 
 
 [build-system]

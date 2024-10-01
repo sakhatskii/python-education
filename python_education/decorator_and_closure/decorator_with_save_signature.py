@@ -20,8 +20,8 @@ def add(x, y):
 
 add(90, 40)
 
-print("Имя функции:", add.__name__)  # выводит "add" (без @wraps вывело бы "wrapper")
-print(f"Документация функции {add.__name__}:", add.__doc__)  # выводит "Функция сложения двух чисел" (без @wraps None)
+print("Имя функции:", add.__name__)  # без @wraps "Имя функции: wrapper"
+print(f"Документация функции {add.__name__}:", add.__doc__)  # без @wraps "Документация функции wrapper: None"
 
 
 # Вызываем функцию add с аргументами (90, 40)
