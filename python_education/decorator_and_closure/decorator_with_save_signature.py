@@ -1,8 +1,8 @@
 from functools import wraps
 
 
-def debug_decorator(function):  # "обертываем" функцию add новыми свойствами
-    @wraps(function)  # декоратор копирует метаданные из функции function во wrapper
+def debug_decorator(function):
+    @wraps(function)
     def wrapper(*args):
         print(f"Вызываем функцию {function.__name__} с аргументами {args}")
         result = function(*args)
@@ -20,8 +20,8 @@ def add(x, y):
 
 add(90, 40)
 
-print("Имя функции:", add.__name__)  # без @wraps "Имя функции: wrapper"
-print(f"Документация функции {add.__name__}:", add.__doc__)  # без @wraps "Документация функции wrapper: None"
+print("Имя функции:", add.__name__)  # без @wraps -> "Имя функции: wrapper"
+print(f"Документация функции {add.__name__}:", add.__doc__)  # без @wraps -> "Документация функции wrapper: None"
 
 
 # Вызываем функцию add с аргументами (90, 40)

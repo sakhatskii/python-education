@@ -3,14 +3,14 @@ from contextlib import contextmanager
 import psycopg2
 
 
-@contextmanager  # декоратор для создания контекстного менеджера
+@contextmanager
 def connection_to_db(db_name: str):
     try:
-        connection = psycopg2.connect(dbname="name", user="name", password="password", host='127.0.0.1')  # подключаемся к бд
-        cursor = connection.cursor()  # создаем курсор для выполнения запросов
-        yield cursor  # возвращаем курсор для использования в блоке with
+        connection = psycopg2.connect(dbname="name", user="name", password="password", host='127.0.0.1')
+        cursor = connection.cursor()
+        yield cursor
     except psycopg2.OperationalError as e:
-        print(f"Ошибка подключения к базе данных по причине: {e}")  # выводим сообщение в случае сбоя подключения к бд
+        print(f"Ошибка подключения к базе данных по причине: {e}")
     finally:
         cursor.close()
         connection.close()
