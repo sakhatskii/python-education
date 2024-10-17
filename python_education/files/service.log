@@ -1,0 +1,3 @@
+[2024-10-17 14:53:57.943] [info] [code] [] [@FLAPTOP-i] [HTTP] [] [127.0.0.1:7000] [127.0.0.1] [] [go:33] command test_1 was executed successfully.
+[2024-10-17 14:53:57.966] [info] [code] [] [@FLAPTOP-i] [HTTP] [] [127.0.0.1:7000] [127.0.0.1] [] [go:33] command test_2 was executed successfully.
+[2024-10-17 14:53:58.158] [info] [code] [] [@FLAPTOP-i] [Shell] [] [] [] [] [go:30] command test_1 was executed successfully.

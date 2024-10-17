@@ -350,6 +350,20 @@ tomli = {version = ">=1", markers = "python_version < \"3.11\""}
 dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
+name = "pytest-check"
+version = "2.4.1"
+description = "A pytest plugin that allows multiple failures per test."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pytest_check-2.4.1-py3-none-any.whl", hash = "sha256:74f38938183880d9921aeb85662437d2b13e1e053e1bed7d186d54613d3068c7"},
+    {file = "pytest_check-2.4.1.tar.gz", hash = "sha256:5224efcef059bf7f0cda253f8d0f62704b4819ff48c93f51c675aea6a014f650"},
+]
+
+[package.dependencies]
+pytest = ">=7.0.0"
+
+[[package]]
 name = "solus"
 version = "1.2.2"
 description = "Singleton types."
@@ -431,4 +445,4 @@ typing-extensions = ">=4.12.2"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "39fca1c81d553235572d179b6643b5faa6dc466c9c57b880974813ce0a733e06"
+content-hash = "0637292ef138d1ebf4c6daa96c968ae374aec181ca5e2786e3103310585eb367"
