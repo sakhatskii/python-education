@@ -1,5 +1,4 @@
-import pytest_check as check
-from re import compile
+import pytest_check as check  # type: ignore
 
 
 class TestLog:
