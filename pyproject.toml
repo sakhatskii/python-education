@@ -16,6 +16,8 @@ types-psycopg2 = "^2.9.21.20240819"
 flake8-pyproject = "^1.2.3"
 pytest = "^8.3.3"
 pytest-check = "^2.4.1"
+pydantic = "^2.9.2"
+strenum = "^0.4.15"
 
 [build-system]
 requires = ["poetry-core"]
