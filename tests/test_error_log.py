@@ -1,4 +1,5 @@
 import pytest_check as check  # type: ignore
+from re import compile
 
 
 class TestLog:
