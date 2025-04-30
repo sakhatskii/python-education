@@ -1,18 +1,10 @@
 import socket
 import logging
 
-# Настройка логирования
-file_log = logging.FileHandler('../tcp_socket.log')
-console_out = logging.StreamHandler()
+from python_education.logger.logger import create_logger
 
-logging.basicConfig(
-    handlers=(file_log, console_out),
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s'
-)
 
-logger = logging.getLogger(__name__)
-
+logger = create_logger()
 
 def run_client():
     host = '127.0.0.1'
