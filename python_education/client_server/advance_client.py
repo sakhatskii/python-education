@@ -6,7 +6,9 @@ from python_education.logger.logger import create_logger
 
 logger = create_logger()
 
-def run_client():
+"""Клиент отправляет сообщение из консоли. В ответе сервер возвращает сообщение"""
+
+def run_tcp_client():
     host = '127.0.0.1'
     port = 12345
 
@@ -41,4 +43,4 @@ def run_client():
 
 
 if __name__ == "__main__":
-    run_client()
+    run_tcp_client()

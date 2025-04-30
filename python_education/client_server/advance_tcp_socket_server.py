@@ -5,17 +5,22 @@ from python_education.logger.logger import create_logger
 
 logger = create_logger()
 
-def run_server():
+"""
+Низкоуровневая реализация (абстракция) сервера с использованием модуля socket. Сервер возвращает полученное от клиента сообщение.
+Здесь нет никакого HTTP, только клиент-серверное взаимодействие по TCP. 
+"""
+
+def run_tcp_server():
     host = '127.0.0.1'
     port = 12345
 
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
-            server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # чтобы не было ошибки [Errno 98] Address already in use
             server_socket.bind((host, port))
             server_socket.listen(5)
 
-            logger.info(f"Server started on {host}:{port}")
+            logger.info(f"TCP server started on {host}:{port}")
             logger.info("Waiting for connections...")
 
             while True:
@@ -49,4 +54,4 @@ def run_server():
 
 
 if __name__ == "__main__":
-    run_server()
+    run_tcp_server()
