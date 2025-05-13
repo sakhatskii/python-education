@@ -9,7 +9,7 @@ server_sock.listen(5)  # прослушивание подключений, ма
 
 print("Socket server starts")
 while True:
-    client_sock, client_addr = server_sock.accept()  # accept() - метод для приема входящих подключений, client_sock - второй сокет на сервере
+    client_sock, client_addr = server_sock.accept()  # accept() - метод для приема входящих подключений, client_sock - второй сокет на серв
     data = client_sock.recv(1024)  # данные от клиента
     message_from_client = data.decode()  # преобразование данных в строку
 

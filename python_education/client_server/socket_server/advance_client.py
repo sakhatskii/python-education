@@ -1,5 +1,4 @@
 import socket
-import logging
 
 from python_education.logger.logger import create_logger
 
@@ -16,6 +15,7 @@ logger = create_logger()
 
 В методе recv() мы передаем максимальное число байтов, которое мы желаем получить.
 """
+
 
 def run_tcp_client():
     host = '127.0.0.1'

@@ -7,8 +7,9 @@ logger = create_logger()
 
 """
 Низкоуровневая реализация (абстракция) сервера с использованием модуля socket. Сервер возвращает полученное от клиента сообщение.
-Здесь нет никакого HTTP, только клиент-серверное взаимодействие по UDP. 
+Здесь нет никакого HTTP, только клиент-серверное взаимодействие по UDP.
 """
+
 
 def run_udp_server():
     host = '127.0.0.1'
@@ -45,6 +46,7 @@ def run_udp_server():
         logger.info("UDP server stopped by admin")
     except Exception as e:
         logger.error(f"Server startup error: {e}")
+
 
 if __name__ == "__main__":
     run_udp_server()

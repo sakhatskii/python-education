@@ -1,5 +1,6 @@
 import logging
 
+
 def create_logger() -> logging.Logger:
     file_log = logging.FileHandler('../tcp_socket.log')
     console_out = logging.StreamHandler()
