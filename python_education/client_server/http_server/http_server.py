@@ -5,6 +5,23 @@ from python_education.logger.logger import create_logger
 
 logger = create_logger()
 
+"""
+Реализация простого HTTP-сервера с использованием модуля http.server. 
+
+HTTPServer - базовый класс для HTTP-сервера.
+BaseHTTPRequestHandler - базовый класс для обработки HTTP-запросов.
+
+send_response(200) - отправляет код статуса 200 (OK),
+send_header() - добавляет HTTP-заголовок,
+end_headers() - завершает заголовки,
+wfile.write() - отправляет тело ответа (должно быть в байтах).
+
+rfile.read(size) - доступ к телу запроса. Функции должен быть явно передан размер, иначе запрос будет висеть и никогда не закончится.
+Size (content_length) может быть извлечен через headers и преобразован в целое число.
+
+serve_forever() запускает бесконечный цикл обработки запросов.
+"""
+
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):  # curl -X GET http://127.0.0.1:8000
