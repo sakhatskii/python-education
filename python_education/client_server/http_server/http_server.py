@@ -33,6 +33,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):  # curl -X POST -d '{"name": "ALEX"}' http://127.0.0.1:8000
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
+        logger.info(f"Server received: {post_data.decode('utf-8')}")
         data = json.loads(post_data)
         response = {"message": f"Hello, {data['name']}!"}
 
@@ -45,7 +46,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    logger.info(f"Starting httpd server on port {port}")
+    logger.info(f"Starting server on port {port}")
     httpd.serve_forever()
 
 
