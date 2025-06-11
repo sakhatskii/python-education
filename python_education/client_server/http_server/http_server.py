@@ -33,9 +33,21 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):  # curl -X POST -d '{"name": "ALEX"}' http://127.0.0.1:8000
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
-        logger.info(f"Server received: {post_data.decode('utf-8')}")
+        logger.info(f"Server received POST: {post_data.decode('utf-8')}")
         data = json.loads(post_data)
         response = {"message": f"Hello, {data['name']}!"}
+
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(response).encode())
+
+    def do_PUT(self):  # curl -X PUT -d '{"name": "ALEX"}' http://127.0.0.1:8000
+        content_length = int(self.headers['Content-Length'])
+        put_data = self.rfile.read(content_length)
+        logger.info(f"Server received PUT: {put_data.decode('utf-8')}")
+        data = json.loads(put_data)
+        response = {"message": f"Data for {data['name']} updated successfully!"}
 
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
