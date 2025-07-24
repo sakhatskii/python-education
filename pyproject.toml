@@ -28,3 +28,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.flake8]
 max-line-length = 140
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]

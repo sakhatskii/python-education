@@ -1,5 +1,6 @@
 import pytest
 
+
 class TestPytestRaises:
     """Способы отлавливания ошибок в тестах, чтобы тесты не падали"""
     def test_1(self):

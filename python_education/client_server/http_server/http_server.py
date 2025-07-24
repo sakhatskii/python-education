@@ -6,7 +6,7 @@ from python_education.logger.logger import create_logger
 logger = create_logger()
 
 """
-Реализация простого HTTP-сервера с использованием модуля http.server. 
+Реализация простого HTTP-сервера с использованием модуля http.server.
 
 HTTPServer - базовый класс для HTTP-сервера.
 BaseHTTPRequestHandler - базовый класс для обработки HTTP-запросов.
