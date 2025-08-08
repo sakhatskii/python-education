@@ -13,7 +13,7 @@ class TestFastApi:
     def test_fast_api_2(self, client):
         response = client.post("/calculate", json={"num1": 5, "num2": 10})
 
-        check.equal(response.status_code, 200)
+        check.equal(response.status_code, 201)
         check.equal(response.request.method, "POST")
         check.equal(response.json(), {"result": 15})
 
