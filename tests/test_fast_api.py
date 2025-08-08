@@ -1,12 +1,8 @@
 import pytest_check as check
-from starlette.testclient import TestClient
 
-from python_education.client_server.fast_api.lesson_2_1 import app
-
-client = TestClient(app)
 
 class TestFastApi:
-    def test_fast_api_1(self):
+    def test_fast_api_1(self, client):
         response = client.get("/")
 
         check.equal(response.status_code, 200)
